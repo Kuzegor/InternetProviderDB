@@ -1,3 +1,9 @@
+begin
+create database InternetProvider;
+end
+go
+
+begin
 use InternetProvider;
 
 create table Companies(
@@ -85,5 +91,5 @@ create table ClientHouses(
 id int identity primary key,
 ClientId int references Clients(id) on delete cascade on update cascade,
 HouseId int references Houses(id) on delete cascade on update cascade);
-
+end
 
